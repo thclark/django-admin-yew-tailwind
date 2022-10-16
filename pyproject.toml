@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "django-admin-yew-tailwind"
+version = "0.0.1"
+description = "A demonstrator project for using Rust with Yew and Tailwind to build django-admin widgets"
+authors = ["Tom Clark"]
+license = "MIT"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Rust",
+    "Operating System :: OS Independent",
+]
+repository = "https://github.com/thclark/django-admin-yew-tailwind"
+keywords = ["django", "admin", "rust", "widget", "yew", "tailwind"]
+packages = [{ include = "yewtail" },]
+
+
+[tool.poetry.dependencies]
+Django = ">=3.0,<5"
+python = ">=3.9,<3.11"
+django-app-settings = "^0.7.1"
+
+[tool.poetry.dev-dependencies]
+coverage = "^6.2"
+pre-commit = "^2.17.0"
+pytest-sugar = "^0.9.4"
+pytest-django = "^4.5.2"
+pytest-asyncio = "^0.17.2"
+pytest = "^7.0.0"
+tox = "^3.24.5"
+tox-gh-actions = "^2.9.1"
+tox-poetry = "^0.4.1"
+sphinx-rtd-theme = "^1.0.0"
+sphinx-tabs = "^3.2.0"
+Sphinx = "^4.4.0"
+django-test-migrations = "^1.2.0"
+django-extensions = "^3.2.0"
+pylint-django = "^2.5.3"
+watchdog = "^2.1.9"
+throttle = "^0.2.2"
+psycopg2-binary = "^2.9.3"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
