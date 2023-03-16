@@ -147,3 +147,7 @@ docs/doctrees
 
 # GCP credentials
 gcp-cred*
+
+# Any raw index.html and tailwind css from local experiments
+tailwind.css
+index.html
