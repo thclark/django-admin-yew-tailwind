@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django_extensions",  # Gives us shell_plus and reset_db for manipulating the test server
-    "django_gcp",
+    "yewtail",
     "tests.server.example",
 ]
 
@@ -51,7 +51,7 @@ MIDDLEWARE = [
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(PROJECT_DIR, "django_gcp", "templates")],
+        "DIRS": [os.path.join(PROJECT_DIR, "yewtail", "templates")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -104,17 +104,5 @@ GCP_STORAGE_STATIC = {"bucket_name": "example-static-assets"}
 STATIC_URL = f"https://storage.googleapis.com/{GCP_STORAGE_STATIC['bucket_name']}/"
 STATIC_ROOT = "/static/"
 
-
-# ---------------------------------------------------------------------------
-# HERE'S HOW TO SET UP TASKS
-# ---------------------------------------------------------------------------
-
-GCP_TASKS_DEFAULT_QUEUE_NAME = "example-primary"
-GCP_TASKS_DELIMITER = "--"
-# This is the domain on which the worker app can receive requests
-# You can use localtunnel to easily create your own public domain to
-# run end-to-end integration tests with a real GCP project
-GCP_TASKS_DOMAIN = "https://outrageous-horny-giraffe.loca.lt"
-GCP_TASKS_EAGER_EXECUTE = False
-GCP_TASKS_REGION = "europe-west1"
-GCP_TASKS_RESOURCE_PREFIX = "django-gcp"
+# Set up model autofield types
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
