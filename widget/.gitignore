@@ -1,0 +1,5 @@
+/dist/
+/target/
+
+# This is built during trunk's pre_build hooks phase; it doesn't need to be committed
+tailwind.css
