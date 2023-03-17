@@ -1,13 +1,13 @@
 from django.contrib import admin
 
-from tests.server.example.models import ExampleModel
+from .models import YewtailModel
 
 
-# class ExampleModelForm(ModelForm):
+# class YewtailModelForm(ModelForm):
 #     """A form that overrides the upload widget"""
 
 #     class Meta:
-#         model = ExampleStorageModel
+#         model = YewtailModel
 #         widgets = {
 #             "text": CloudFileWidget(
 #                 bucket_identifier="gs://example-media-assets",
@@ -17,14 +17,14 @@ from tests.server.example.models import ExampleModel
 #         fields = "__all__"
 
 
-class ExampleModelAdmin(admin.ModelAdmin):
+class YewtailModelAdmin(admin.ModelAdmin):
     """A basic admin panel"""
 
-    # form = ExampleStorageModelForm
+    # form = YewtailModelModelForm
 
     # formfield_overrides = {
     #     DirectUploadFileField: {"widget": DirectUploadWidget(bucket_identifier="gs://example-media-assets")},
     # }
 
 
-admin.site.register(ExampleModel, ExampleModelAdmin)
+admin.site.register(YewtailModel, YewtailModelAdmin)

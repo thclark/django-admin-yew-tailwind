@@ -7,4 +7,4 @@ class ExampleAppConfig(AppConfig):
 
     name = "tests.server.example"
     label = "example"
-    verbose_name = _("Example App using yewtail widget")
+    verbose_name = _("Example App using the yewtail library")
