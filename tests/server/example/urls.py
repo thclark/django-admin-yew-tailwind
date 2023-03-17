@@ -1,8 +1,8 @@
 from django.urls import re_path
 
-from .views import enqueue_an_on_demand_task
+from .views import do_something
 
 
 urlpatterns = [
-    re_path(r"^enqueue-an-on-demand-task/", enqueue_an_on_demand_task, name="enqueue-on-demand"),
+    re_path(r"^enqueue-an-on-demand-task/", do_something, name="enqueue-on-demand"),
 ]

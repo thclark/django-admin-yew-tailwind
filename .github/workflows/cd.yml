@@ -6,6 +6,7 @@ on:
     types: [closed]
     branches:
       - main
+
 jobs:
   release:
     # This job will only run if the PR has been merged (and not closed without merging).

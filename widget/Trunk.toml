@@ -1,0 +1,12 @@
+# For all possible options, see:
+# https://github.com/thedodd/trunk/blob/master/Trunk.toml
+
+[[hooks]]
+stage = "pre_build"
+command = "sh"
+command_arguments = ["-c", "scripts/build_tailwind.sh $TRUNK_PROFILE"]
+
+[[hooks]]
+stage = "post_build"
+command = "python"
+command_arguments = ["scripts/to_template.py"]
